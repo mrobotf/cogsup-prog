@@ -25,7 +25,12 @@ def print_triangle_o(rows):
     """
     Print a centered triangle made of the letter 'o'.
     """
-    pass
+    for i in range(1, rows+1):
+        print(' '*(rows-i), end = '')
+        print('o'*(i*2-1), end = '')
+        print(' '*(rows-i))
+
+print_triangle_o(4)
 
 sprint("---")
 
@@ -42,7 +47,10 @@ sprint("Exercise 5.2")
 
 def prod_list_easy(lst):
     """Returns the product of the elements in a number list iteratively."""
-    pass
+    return math.prod(lst)
+
+import math
+prod_list_easy([12, 3, 9, 11, 6])
 
 sprint("---")
 
@@ -63,7 +71,13 @@ sprint("Exercise 5.3")
 
 def prod_list_rec(lst):
     """Returns the product of the elements in a number list recursively."""
-    pass
+    if len(lst) <= 1:
+        return lst[0]
+    else:
+        return lst[0] * prod_list_rec(lst[1:])
+
+list = [12, 3, 9, 11, 6]
+print(list[0] * prod_list_rec(list[1:]))
 
 sprint("---")
 
@@ -81,6 +95,8 @@ Hint: The product of the empty set is 1.
 
 sprint("Exercise 5.4")
 
+import numbers
+
 def prod_list_rec_full(lst):
     """
     Recursively return the product of a list of numbers.
@@ -88,7 +104,19 @@ def prod_list_rec_full(lst):
     If the list contains non-numeric elements, a message is printed out
     and the function returns nothing.
     """
-    pass
+    if len(lst) == 0:
+        return 1
+    elif not isinstance(lst[0], numbers.Number):
+        return None
+        # raise TypeError("List contains non-numeric elements")
+    elif len(lst) <= 1:
+        return lst[0]
+    else:
+        return lst[0] * prod_list_rec_full(lst[1:])
+
+# lst = [12, 3, 3, 'a', 11]
+# print("list is: ", lst)
+# print(lst[0] * prod_list_rec_full(lst[1:]))
     
 sprint("---")
 
@@ -103,16 +131,16 @@ expected outputs. If you solved the exercises correctly, the script will tell yo
 ------
 """
 
-### Run test cases
-# if __name__ == "__main__":
-#     from testcases import (
-#         run_tests_ex51,
-#         run_tests_ex52,
-#         run_tests_ex53,
-#         run_tests_ex54,
-#     )
+## Run test cases
+if __name__ == "__main__":
+    from testcases import (
+        run_tests_ex51,
+        run_tests_ex52,
+        run_tests_ex53,
+        run_tests_ex54,
+    )
 
-#     run_tests_ex51()
-#     run_tests_ex52()
-#     run_tests_ex53()
-#     run_tests_ex54()
+    run_tests_ex51()
+    run_tests_ex52()
+    run_tests_ex53()
+    run_tests_ex54()
