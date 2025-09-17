@@ -33,7 +33,6 @@ control.start(subject_id=1)
 
 square_left.present(clear=True, update=False)
 square_right.present(clear=False, update=True)
-# fixation.present(clear=False, update=True)
 
 
 # Leave it on-screen until a key is pressed

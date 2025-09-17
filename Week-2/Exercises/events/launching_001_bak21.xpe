@@ -1,0 +1,86 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Wed Sep 17 2025 22:14:57
+#sha1: ba5f7f
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+1068,design,log,
+#design: #exp: Two_squares
+#design: block_cnt,block_id,trial_cnt,trial_id
+1068,design,logged,
+1068,Experiment,started
+1068,Stimulus,presented,1
+1084,Stimulus,presented,2
+2100,Stimulus,presented,1
+2117,Stimulus,presented,2
+2134,Stimulus,presented,1
+2150,Stimulus,presented,2
+2167,Stimulus,presented,1
+2184,Stimulus,presented,2
+2200,Stimulus,presented,1
+2217,Stimulus,presented,2
+2233,Stimulus,presented,1
+2250,Stimulus,presented,2
+2266,Stimulus,presented,1
+2282,Stimulus,presented,2
+2300,Stimulus,presented,1
+2317,Stimulus,presented,2
+2334,Stimulus,presented,1
+2350,Stimulus,presented,2
+2367,Stimulus,presented,1
+2383,Stimulus,presented,2
+2401,Stimulus,presented,1
+2417,Stimulus,presented,2
+2434,Stimulus,presented,1
+2450,Stimulus,presented,2
+2467,Stimulus,presented,1
+2484,Stimulus,presented,2
+2500,Stimulus,presented,1
+2517,Stimulus,presented,2
+2534,Stimulus,presented,1
+2551,Stimulus,presented,2
+2567,Stimulus,presented,1
+2584,Stimulus,presented,2
+2601,Stimulus,presented,1
+2617,Stimulus,presented,2
+2634,Stimulus,presented,1
+2649,Stimulus,presented,2
+2667,Stimulus,presented,1
+2683,Stimulus,presented,2
+2700,Stimulus,presented,1
+2717,Stimulus,presented,2
+2734,Stimulus,presented,1
+2750,Stimulus,presented,2
+2766,Stimulus,presented,1
+2783,Stimulus,presented,2
+2800,Stimulus,presented,1
+2818,Stimulus,presented,2
+2834,Stimulus,presented,1
+2851,Stimulus,presented,2
+2866,Stimulus,presented,1
+2883,Stimulus,presented,2
+2900,Stimulus,presented,1
+2917,Stimulus,presented,2
+2934,Stimulus,presented,1
+2950,Stimulus,presented,2
+2968,Stimulus,presented,1
+2984,Stimulus,presented,2
+3001,Stimulus,presented,1
+3017,Stimulus,presented,2
+3034,Stimulus,presented,1
+3050,Stimulus,presented,2
+3066,Stimulus,presented,1
+3084,Stimulus,presented,2
+3101,Stimulus,presented,1
+3117,Stimulus,presented,2
+3134,Stimulus,presented,1
+3151,Stimulus,presented,2
+3168,Stimulus,presented,1
+3184,Stimulus,presented,2
+3200,Stimulus,presented,1
+3217,Stimulus,presented,2
+3233,Stimulus,presented,1
+3250,Stimulus,presented,2
+6437,Keyboard,received,32,wait
+6437,Experiment,ended

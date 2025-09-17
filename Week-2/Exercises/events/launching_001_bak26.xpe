@@ -1,0 +1,34 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Wed Sep 17 2025 22:17:49
+#sha1: 48d6e3
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+881,design,log,
+#design: #exp: Two_squares
+#design: block_cnt,block_id,trial_cnt,trial_id
+881,design,logged,
+881,Experiment,started
+881,Stimulus,presented,1
+887,Stimulus,presented,2
+1904,Stimulus,presented,2
+1904,Stimulus,presented,1
+2905,Stimulus,presented,1
+3906,Stimulus,presented,1
+4907,Stimulus,presented,1
+5908,Stimulus,presented,1
+6909,Stimulus,presented,1
+7910,Stimulus,presented,1
+8910,Stimulus,presented,1
+9911,Stimulus,presented,1
+10912,Stimulus,presented,1
+11913,Stimulus,presented,1
+12914,Stimulus,presented,1
+13915,Stimulus,presented,1
+14915,Stimulus,presented,1
+15916,Stimulus,presented,1
+16343,stderr,received,'Traceback (most recent call last):'
+16344,stderr,received,'  File "D:\\UPcite_learning material\\Programming\\Assignments\\Week-2\\Exercises\\launching.py", line 45, in <module>\n    exp.clock.wait(1000)\n    ~~~~~~~~~~~~~~^^^^^^'
+16344,stderr,received,'  File "C:\\Users\\23945\\AppData\\Roaming\\Python\\Python313\\site-packages\\expyriment\\misc\\_clock.py", line 148, in wait\n    while (get_time() < start + (waiting_time - looptime) / 1000):\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+16344,stderr,received,'KeyboardInterrupt'

@@ -1,0 +1,52 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Wed Sep 17 2025 22:16:20
+#sha1: b0494c
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+914,design,log,
+#design: #exp: Two_squares
+#design: block_cnt,block_id,trial_cnt,trial_id
+915,design,logged,
+915,Experiment,started
+915,Stimulus,presented,1
+932,Stimulus,presented,2
+1932,Stimulus,presented,2
+1948,Stimulus,presented,1
+1965,Stimulus,presented,1
+1981,Stimulus,presented,1
+1998,Stimulus,presented,1
+2014,Stimulus,presented,1
+2031,Stimulus,presented,1
+2047,Stimulus,presented,1
+2065,Stimulus,presented,1
+2081,Stimulus,presented,1
+2098,Stimulus,presented,1
+2115,Stimulus,presented,1
+2131,Stimulus,presented,1
+2148,Stimulus,presented,1
+2164,Stimulus,presented,1
+2181,Stimulus,presented,1
+2197,Stimulus,presented,1
+2214,Stimulus,presented,1
+2231,Stimulus,presented,1
+2248,Stimulus,presented,1
+2265,Stimulus,presented,1
+2281,Stimulus,presented,1
+2298,Stimulus,presented,1
+2315,Stimulus,presented,1
+2332,Stimulus,presented,1
+2348,Stimulus,presented,1
+2365,Stimulus,presented,1
+2381,Stimulus,presented,1
+2398,Stimulus,presented,1
+2414,Stimulus,presented,1
+2430,Stimulus,presented,1
+2448,Stimulus,presented,1
+2464,Stimulus,presented,1
+2481,Stimulus,presented,1
+2498,Stimulus,presented,1
+2514,Stimulus,presented,1
+3286,Keyboard,received,32,wait
+3286,Experiment,ended
