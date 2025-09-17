@@ -168,7 +168,6 @@ Write code that prints the multiplication table:
  9  18  27  36  45  54  63  72  81  90
  10  20  30  40  50  60  70  80  90 100
 
-You should be able to give any value to row and see a pyramid. 
 
 Hint: One of the two links at the top of this script contains helpful information
 on how to align the numbers.
