@@ -5,7 +5,7 @@
 # Import the main modules of expyriment
 from expyriment import design, control, stimuli
 
-control.set_develop_mode()
+# control.set_develop_mode()
 
 # Create an object of class Experiment: This stores the global settings of your experiment & handles the data file, screen, and input devices
 exp = design.Experiment(name = "Two_squares")
@@ -39,6 +39,9 @@ square_left.present(clear=True, update=False)
 # Present square on the right
 square_right.present(clear=False, update=True)
 
+# Leave them on-screen for 1,000 ms
+exp.clock.wait(1000)
+
 # step size for moving squares, control speed of movement
 step_size = 5
 
@@ -48,8 +51,6 @@ while square_right.position[0] - square_left.position[0] > 50:
     # to update screen, show new position of left square
     square_left.present(clear=True, update=False)
     square_right.present(clear=False, update=True)
-
-exp.clock.wait(70)
 
 # Then move the right square
 while square_right.position[0] - square_left.position[0] < 400:
