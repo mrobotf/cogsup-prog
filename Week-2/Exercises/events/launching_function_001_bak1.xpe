@@ -1,0 +1,18 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Thu Sep 18 2025 14:42:25
+#sha1: abbb46
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+968,design,log,
+#design: #exp: Two_squares
+#design: block_cnt,block_id,trial_cnt,trial_id
+968,design,logged,
+968,Experiment,started
+968,Stimulus,presented,1
+985,Stimulus,presented,2
+986,stderr,received,'Traceback (most recent call last):'
+987,stderr,received,'  File "D:\\UPcite_learning material\\Programming\\Assignments\\Week-2\\Exercises\\launching_function.py", line 57, in <module>\n    control.start(subject_id=1)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^'
+987,stderr,received,'  File "C:\\Users\\23945\\AppData\\Roaming\\Python\\Python313\\site-packages\\expyriment\\control\\_experiment_control.py", line 59, in start\n    raise Exception("Experiment is already started!")'
+987,stderr,received,'Exception: Experiment is already started!'

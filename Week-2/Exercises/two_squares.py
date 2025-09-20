@@ -12,9 +12,6 @@ exp = design.Experiment(name = "Two_squares")
 # Initialize the experiment: Must be done before presenting any stimulus
 control.initialize(exp)
 
-# Create a fixation cross (color, size, and position will take on default values)
-fixation = stimuli.FixCross() # At this stage the fixation cross is not yet rendered
-
 square_size = (50, 50)
 square_left = stimuli.Rectangle(
     square_size,

@@ -1,0 +1,11 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Thu Sep 18 2025 17:54:41
+#sha1: 3cb275
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+364,stderr,received,'Traceback (most recent call last):'
+364,stderr,received,'  File "D:\\UPcite_learning material\\Programming\\Assignments\\Week-2\\Exercises\\launching_random_motion.py", line 52, in <module>\n    pos_center_x = random.randrange(\n        -(screen_width/2-circle_radius),\n        screen_width/2 -circle_radius)'
+364,stderr,received,'  File "C:\\Program Files\\Python313\\Lib\\random.py", line 305, in randrange\n    istart = _index(start)'
+364,stderr,received,"TypeError: 'float' object cannot be interpreted as an integer"

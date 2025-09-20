@@ -1,0 +1,16 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Sat Sep 20 2025 23:29:28
+#sha1: 5c39bc
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+310,stderr,received,'Exception ignored in: <function Visual.__del__ at 0x000002475702CD60>'
+310,stderr,received,'Traceback (most recent call last):'
+310,stderr,received,'  File "C:\\Users\\23945\\AppData\\Roaming\\Python\\Python313\\site-packages\\expyriment\\stimuli\\_visual.py", line 266, in __del__'
+310,stderr,received,'    if self._compression_filename is not None:'
+310,stderr,received,"AttributeError: 'Line' object has no attribute '_compression_filename'"
+311,stderr,received,'Traceback (most recent call last):'
+311,stderr,received,'  File "D:\\UPcite_learning material\\Programming\\Assignments\\Week-2\\Exercises\\labeled_shapes_function.py", line 64, in <module>\n    polygon(3, 50, (138,43,226), (-100, 0))\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+312,stderr,received,'  File "D:\\UPcite_learning material\\Programming\\Assignments\\Week-2\\Exercises\\labeled_shapes_function.py", line 43, in polygon\n        line_triangle = stimuli.Line(\n                        ~~~~~~~~~~~~^\n    start_point = (-100, (25*(3**0.5))/2),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    end_point = (-100, 50+(25*(3**0.5))/2),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^'
+312,stderr,received,"TypeError: Line.__init__() missing 1 required positional argument: 'line_width'"
