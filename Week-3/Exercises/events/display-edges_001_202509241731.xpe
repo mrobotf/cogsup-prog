@@ -1,0 +1,19 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Wed Sep 24 2025 17:31:54
+#sha1: b07564
+#modules: 
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+10791,design,log,
+#design: #exp: Display Edges
+#design: block_cnt,block_id,trial_cnt,trial_id
+10791,design,logged,
+10791,Experiment,started
+10791,Stimulus,presented,3
+10792,Stimulus,presented,0
+10793,Stimulus,presented,1
+10807,Stimulus,presented,2
+41197,Keyboard,received,32,wait
+41197,Experiment,ended
+41213,Stimulus,presented,4
