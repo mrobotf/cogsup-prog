@@ -1,0 +1,11 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Sun Sep 28 2025 12:54:02
+#sha1: 93bcc3
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+298,stderr,received,'Traceback (most recent call last):'
+299,stderr,received,'  File "D:\\UPcite\\Programming\\Assignments\\Week-3\\Exercises\\hermann-grid.py", line 47, in <module>\n    hermann_grid(exp,\n    ~~~~~~~~~~~~^^^^^\n                 rows=6, cols=6,\n                 ^^^^^^^^^^^^^^^\n                 square_size=80, spacing=20,\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                 square_color=C_BLACK, background_color=C_WHITE)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+299,stderr,received,'  File "D:\\UPcite\\Programming\\Assignments\\Week-3\\Exercises\\hermann-grid.py", line 18, in hermann_grid\n    exp.add_experiment_info(background_colour=C_WHITE)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+299,stderr,received,"TypeError: Experiment.add_experiment_info() got an unexpected keyword argument 'background_colour'"

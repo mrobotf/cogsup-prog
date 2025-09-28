@@ -3,23 +3,30 @@ from expyriment.misc.constants import C_BLACK, C_WHITE
 
 control.set_develop_mode()
 
-def hermann_grid(exp, rows=6, cols=6,
+def hermann_grid(rows=6, cols=6,
                  square_size=80, spacing=20,
-                 square_color=C_BLACK):
+                 square_color=C_BLACK, background_color=C_WHITE):
     """
     Display a Hermann grid illusion.
 
     rows, cols : Number of squares vertically and horizontally.
-    square_size : Size of each black square (pixels).
-    spacing : Space between squares (pixels).
-    square_color : Color of squares (default black).
+    square_size : Size of each black square.
+    spacing : Space between squares.
+    square_color : Color of squares.
     """
+    # background_colour is a read-only property,
+    # therefore set it inside of the function
+    exp = design.Experiment(
+        name="Hermann Grid",
+        background_colour=background_color
+    )
+    control.initialize(exp)
 
     total_width = cols * square_size + (cols - 1) * spacing
     total_height = rows * square_size + (rows - 1) * spacing
 
     canvas = stimuli.Canvas(size=(total_width, total_height),
-                            colour=C_WHITE)
+                            colour=background_color)
 
     for row in range(rows):
         for col in range(cols):
@@ -34,19 +41,14 @@ def hermann_grid(exp, rows=6, cols=6,
             square.plot(canvas)
 
     canvas.present(clear=True, update=True)
-
-    exp.keyboard.wait()
-    control.end()
+    return exp
 
 
 if __name__ == "__main__":
-    exp = design.Experiment(
-        name="Hermann Grid",
-        background_colour=C_WHITE
-    )
-    control.initialize(exp)
-
-    hermann_grid(exp,
-                 rows=6, cols=6,
+    exp = design.Experiment()
+    exp = hermann_grid(rows=6, cols=6,
                  square_size=80, spacing=20,
-                 square_color=C_BLACK)
+                 square_color=C_BLACK, background_color=C_WHITE)
+    
+    exp.keyboard.wait()
+    control.end()

@@ -13,7 +13,7 @@ def kanizsa_rectangle(aspect_ratio=1.0, rect_scale=0.25, circle_scale=0.05):
     """
 
 
-    screen_w, screen_h = exp.screen.size
+    screen_w, _ = exp.screen.size
 
     rect_height = screen_w * rect_scale
     rect_width = rect_height * aspect_ratio
@@ -44,8 +44,6 @@ def kanizsa_rectangle(aspect_ratio=1.0, rect_scale=0.25, circle_scale=0.05):
     circle_rd.present(clear=False, update=False)
     rectangle.present(clear=False, update=True)
 
-    exp.keyboard.wait()
-    control.end()
 
 
 if __name__ == "__main__":
@@ -56,3 +54,6 @@ if __name__ == "__main__":
     control.initialize(exp)
     # Wide rectangle, medium size, medium circles
     kanizsa_rectangle(aspect_ratio=2.0, rect_scale=0.25, circle_scale=0.05)
+
+    exp.keyboard.wait()
+    control.end()
