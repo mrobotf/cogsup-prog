@@ -1,14 +1,11 @@
 from expyriment import design, control, stimuli, misc
-
+from expyriment.misc.constants import C_BLACK, C_WHITE, C_GREY
 control.set_develop_mode()
 
 # Part 1: Global settings
-GREY = misc.constants.C_GREY
-WHITE = misc.constants.C_WHITE
-BLACK = misc.constants.C_BLACK
+exp = design.Experiment(name = "Display Edges", background_colour=C_GREY)
 
-exp = design.Experiment(name = "Display Edges", background_colour=GREY)
-# exp.add_experiment_info(background_colour=GREY)
+# exp.add_experiment_info(background_colour=C_GREY)
 control.initialize(exp)
 width, height = exp.screen.size
 side_length = width * 0.25
@@ -19,27 +16,27 @@ width, height = width//2, height//2
 rectangle = stimuli.Rectangle(
     size=(side_length, side_length),
     position=(0, 0),
-    colour=GREY,
+    colour=C_GREY,
     # line_width=1,
 )
 circle_lu = stimuli.Circle(
     radius=radius,
-    colour=BLACK,
+    colour=C_BLACK,
     position=(-side_length/2, side_length/2),
 )
 circle_ld = stimuli.Circle(
     radius=radius,
-    colour=WHITE,
+    colour=C_WHITE,
     position=(-side_length/2, -side_length/2),
 )
 circle_ru = stimuli.Circle(
     radius=radius,
-    colour=BLACK,
+    colour=C_BLACK,
     position=(side_length/2, side_length/2),
 )
 circle_rd = stimuli.Circle(
     radius=radius,
-    colour=WHITE,
+    colour=C_WHITE,
     position=(side_length/2, -side_length/2),
 )
 

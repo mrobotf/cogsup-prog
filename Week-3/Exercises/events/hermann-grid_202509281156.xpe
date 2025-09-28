@@ -1,0 +1,46 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Sun Sep 28 2025 11:56:20
+#sha1: 45b9ac
+#modules: 
+#display: size=(800, 600), window_mode=False, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+4240,Stimulus,presented,0
+4241,Stimulus,presented,1
+4242,Stimulus,presented,2
+4242,Stimulus,presented,3
+4243,Stimulus,presented,4
+4244,Stimulus,presented,5
+4244,Stimulus,presented,6
+4245,Stimulus,presented,7
+4246,Stimulus,presented,8
+4246,Stimulus,presented,9
+4247,Stimulus,presented,10
+4248,Stimulus,presented,11
+4248,Stimulus,presented,12
+4249,Stimulus,presented,13
+4249,Stimulus,presented,14
+4250,Stimulus,presented,15
+4251,Stimulus,presented,16
+4251,Stimulus,presented,17
+4252,Stimulus,presented,18
+4253,Stimulus,presented,19
+4253,Stimulus,presented,20
+4254,Stimulus,presented,21
+4255,Stimulus,presented,22
+4255,Stimulus,presented,23
+4256,Stimulus,presented,24
+4257,Stimulus,presented,25
+4257,Stimulus,presented,26
+4258,Stimulus,presented,27
+4259,Stimulus,presented,28
+4259,Stimulus,presented,29
+4260,Stimulus,presented,30
+4261,Stimulus,presented,31
+4261,Stimulus,presented,32
+4262,Stimulus,presented,33
+4263,Stimulus,presented,34
+4263,Stimulus,presented,35
+11845,Keyboard,received,32,wait
+11845,Experiment,ended
+11854,Stimulus,presented,36
