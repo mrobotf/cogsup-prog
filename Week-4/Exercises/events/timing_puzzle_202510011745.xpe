@@ -1,0 +1,12 @@
+#Expyriment 1.0.0 (Python 3.13.7), .xpe-file, coding: cp936
+#date: Wed Oct 01 2025 17:45:00
+#sha1: 8ea7dc
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26100', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+769,Stimulus,presented,0
+1781,Stimulus,presented,1
+2798,Stimulus,presented,2
+4798,Experiment,ended
+4834,Stimulus,presented,3
