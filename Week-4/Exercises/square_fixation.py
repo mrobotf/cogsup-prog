@@ -10,7 +10,7 @@ square = stimuli.Rectangle(size=(100, 100), line_width=5)
 
 control.start(subject_id=1)
 
-fixation.present(clear=True, update=True)
+fixation.present(clear=True, update=False)
 exp.clock.wait(500)
 
 square.present(clear=False, update=True)

@@ -4,14 +4,21 @@ import random
 def load(stims):
     for stim in stims:
         stim.preload()
-    # pass
 
 def timed_draw(stims):
-    pass
+    # Have draw return its execution time & use that inside display
+    t0 = exp.clock.time
+    for i, stim in enumerate(stims):
+        # includes edge cases:
+        # 1. empty list
+        # 2. only one stimulus
+        stim.present(clear=(i==0), update=(i==len(stims)-1))
+    return exp.clock.time - t0
     # return the time it took to draw
 
 def present_for(stims, t=1000):
-    pass
+    td = timed_draw(stims)
+    exp.clock.wait(t - td)
 
 
 """ Test functions """

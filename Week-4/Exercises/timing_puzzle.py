@@ -21,7 +21,7 @@ exp.clock.wait(1000 - (t1 - t0))
 t2 = exp.clock.time
 
 # to show fixation was present for 1 second
-fix_duration = (t2 - t1)/1000
+fix_duration = (t2 - t0)/1000
 
 text.present()
 
