@@ -2,26 +2,18 @@ from expyriment import design, control, stimuli
 from expyriment.misc.constants import C_BLACK, C_WHITE, \
                                     C_YELLOW, C_RED, C_GREEN
 from expyriment.misc.constants import K_SPACE
+from drawing_functions import *
 import numpy as np
 
-def load(stims):
-    for stim in stims:
-        stim.preload()
 
-def present_for(isi):
-    # convert isi(frame) to ms
-    isi = np.array(isi)
-    isi = 2*((isi) * (1000 / 60)) # in case isi == 0
-    exp.clock.wait(isi)
-    return isi
-      
 def make_circles(r):
-    # TODO set positions based on r
     gap = 2*r+0.2*r
-    positions = [(-(gap / 2 + gap), 0), (-(gap / 2), 0), (gap / 2, 0), (gap / 2 + gap, 0)]
+    positions = [(-(gap / 2 + gap), 0), (-(gap / 2), 0),
+                 (gap / 2, 0), (gap / 2 + gap, 0)]
     circles = [stimuli.Circle(r, position=pos, colour=C_BLACK)
                 for pos in positions]
     return circles, positions
+
 
 def add_tags(stims, r, positions):
     """
@@ -35,7 +27,7 @@ def add_tags(stims, r, positions):
 
 def run_trial(r, isi, color_tag):
     circles, positions = make_circles(r)
-    isi = present_for(isi)
+    isi_time = to_time(isi)
     if color_tag:
         circles = add_tags(circles, r, positions)
         circles_left = circles[:3] + circles[4:7]
@@ -44,23 +36,15 @@ def run_trial(r, isi, color_tag):
         circles_left = circles[:3]
         circles_right = circles[1:4]
     
-
     while True:
         if exp.keyboard.check(K_SPACE): # inside the loop
             break
+        present_for(exp, circles_left, num_frames=12) # 200 ms
+        present_for(exp, [], num_frames=isi)
+      
+        present_for(exp, circles_right, num_frames=12) # 200 ms
+        present_for(exp, [], num_frames=isi)
 
-        for i, c in enumerate(circles_left): # 3 circles on the left
-            c.present(clear=(i==0), update=(i==len(circles_left)-1))
-        exp.clock.wait(10*(1000 / 60))  # show for 10 frame
-        exp.screen.clear()
-        exp.screen.update()
-        exp.clock.wait(isi)
-        for i, c in enumerate(circles_right): # 3 circles on the right
-            c.present(clear=(i==0), update=(i==len(circles_right)-1))
-        exp.clock.wait(10*(1000 / 60))  # show for 1 frame
-        exp.screen.clear()
-        exp.screen.update()
-        exp.clock.wait(isi)
 
 def ternus():
     # 1. Element motion without color tags (low ISI)
