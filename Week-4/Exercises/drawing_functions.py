@@ -30,9 +30,8 @@ def present_for(exp, stims, num_frames):
     if num_frames == 0: # If num_frames = 0 → No need to present anything
         return
     dt = timed_draw(exp, stims) # Get time needed for correction
-    if dt >= 0:     # make sure no weird thing happen(dt<0), or use assert
-        t = to_time(num_frames) # Convert frames to time
-        exp.clock.wait(t - dt) # Adjust waiting time by dt
+    t = to_time(num_frames) # Convert frames to time
+    exp.clock.wait(t - dt) # Adjust waiting time by dt
 
 
 # """ Test functions """
