@@ -1,0 +1,12 @@
+#Expyriment 1.0.0 (Python 3.12.10), .xpe-file, coding: cp936
+#date: Sun Nov 09 2025 22:54:35
+#sha1: c8b1c2
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26200', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+346,stderr,received,'Traceback (most recent call last):'
+347,stderr,received,'  File "D:\\UPCite\\Programing\\Assignments\\Week-6\\Exercises\\stroop.py", line 59, in <module>'
+347,stderr,received,'    stims = {w: {c: stimuli.TextLine(w, text_colour=c) for c in COLORS} for w in WORDS}'
+347,stderr,received,'                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+347,stderr,received,"TypeError: unhashable type: 'Colour'"

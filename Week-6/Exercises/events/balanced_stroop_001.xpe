@@ -1,0 +1,27 @@
+#Expyriment 1.0.0 (Python 3.12.10), .xpe-file, coding: cp936
+#date: Sun Nov 09 2025 22:51:24
+#sha1: f0a151
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Windows', node='Shanli', release='11', version='10.0.26200', machine='AMD64')
+Time,Type,Event,Value,Detail,Detail2
+877,design,log,
+#design: #exp: Balanced Stroop
+#design: #dvn: block_cnt,trial_cnt,trial_type,word,color,RT,correct
+#design: block_cnt,block_id,trial_cnt,trial_id
+877,design,logged,
+877,Experiment,started
+899,Stimulus,presented,3
+1341,Keyboard,received,32,wait
+1342,Stimulus,presented,0
+1847,Stimulus,presented,4
+14095,stderr,received,'Traceback (most recent call last):'
+14095,stderr,received,'  File "D:\\UPCite\\Programing\\Assignments\\Week-6\\Exercises\\balanced_stroop.py", line 168, in <module>'
+14096,stderr,received,'    run_trial(block_id, trial_id, trial_type, word, color)'
+14096,stderr,received,'  File "D:\\UPCite\\Programing\\Assignments\\Week-6\\Exercises\\balanced_stroop.py", line 117, in run_trial'
+14097,stderr,received,'    key, rt = exp.keyboard.wait(KEYS)'
+14097,stderr,received,'              ^^^^^^^^^^^^^^^^^^^^^^^'
+14097,stderr,received,'  File "C:\\Users\\shanl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\expyriment\\io\\_keyboard.py", line 378, in wait'
+14097,stderr,received,'    for event in pygame.event.get([pygame.KEYDOWN, pygame.KEYUP]):'
+14097,stderr,received,'                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
+14097,stderr,received,'KeyboardInterrupt'

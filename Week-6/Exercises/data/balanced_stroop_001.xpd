@@ -1,0 +1,11 @@
+#Expyriment 1.0.0 (Python 3.12.10), .xpd-file, coding: cp936
+#date: Sun Nov 09 2025 22:51:24
+#--EXPERIMENT INFO
+#e mainfile: balanced_stroop.py
+#e sha1: f0a151
+#e modules: 
+#e Experiment: Balanced Stroop
+#e no between subject factors
+#--SUBJECT INFO
+#s id: 1
+subject_id,block_cnt,trial_cnt,trial_type,word,color,RT,correct
