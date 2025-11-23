@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stroop Task</title>
+    <script src="https://unpkg.com/jspsych@8.0.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
+    <link href="https://unpkg.com/jspsych@8.0.2/css/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body></body>
+
+  <script type="text/javascript">
+    const NUMBER_OF_TRIALS_PER_CONDITION = 3;
+    const COLORS = ['red', 'blue', 'green', 'yellow'];
+    const COLOR_WORDS = ['RED', 'BLUE', 'GREEN', 'YELLOW'];
+    const KEYS = ['r', 'b', 'g', 'y'];
+    const BLANK_DURATION = 200; // ms
+    const FIXATION_DURATION = 500; // ms
+
+    function createStroopTrial(word, color, keys, blankDuration, fixationDuration){
+      // create fixation cross, blank, and colored word
+      let fixationTrial = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: "<p style='font-size: 48px;'>+</p>",
+        trial_duration: fixationDuration,
+        choices: [], // no responses allowed during fixation
+      };
+
+      let blankTrial = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: "",
+        trial_duration: blankDuration,
+        choices: [],
+      };
+
+      let stimulusDisplayTrial = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `<p style='color: ${color}; font-size: 48px;'>${word}</p>`,
+        choices: keys,
+        data: {
+          word: word,
+          color: color,
+          congruent: word === color.toUpperCase()
+        }
+      }
+
+      return {
+        timeline: [fixationTrial, blankTrial, stimulusDisplayTrial]
+      }
+    }
+
+    function createShuffledStroopTrials(colorWords, colors, keys, trialsPerCondition, blankDuration, fixationDuration){
+      let possibleTrials = [];
+
+      // pair words and colors
+      for (let w = 0; w < colorWords.length; w += 1){
+        for (let c = 0; c < colors.length; c += 1){
+          possibleTrials.push(
+            createStroopTrial(colorWords[w], colors[c], keys, blankDuration, fixationDuration)
+          );
+        }
+      }
+
+      return jsPsych.randomization.repeat(possibleTrials, trialsPerCondition);
+    }
+  </script>
+
+  <script type="text/javascript">
+    const jsPsych = initJsPsych({
+      on_finish: function(){
+        jsPsych.data.get().localSave("csv", "stroop_results.csv");
+        document.body.innerHTML = "Thank you!";
+      }
+    });
+
+    const helloTrial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `
+        <p>Hello!</p>
+        <p>You will see color words (RED, BLUE, GREEN, YELLOW) displayed on the screen.</p>
+        <p>The words will be shown in different colors.</p>
+        <p>Your task: Press the key for the COLOR of the text</p>
+        <br>
+        <p>Key mapping:</p>
+        <p><b>R</b> = Red | <b>B</b> = Blue | <b>G</b> = Green | <b>Y</b> = Yellow</p>
+        <p><b>Answer as fast as you can!</b></p>
+        <br>
+        <p>Press any key to start.</p>
+        `
+    };
+
+    let trials = createShuffledStroopTrials(
+      COLOR_WORDS, 
+      COLORS, 
+      KEYS, 
+      NUMBER_OF_TRIALS_PER_CONDITION, 
+      BLANK_DURATION,
+      FIXATION_DURATION
+    );
+
+    let timeline = [helloTrial];
+
+    for (let trial of trials){
+      timeline.push(trial);
+    }
+
+    jsPsych.run(timeline);
+  </script>
+</html>
